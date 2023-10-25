@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="modulo" id="gestion_campers"> 
+        <h1 id="comentario">Gestor de estudiantes</h1>
+        
+        <p>Número de indentificacion</p>
+        
+        <input type="number" id="camper_id">
+        <p>Nombre Completo</p>
+        <input type="text" id="camper_name">
+        <p>Correo electronico</p>
+        <input type="email" id="camper_email">
+        <p>Grupo Campus</p>
+        <input type="text" id="camper_group">
+        <p>Campcoins acumulados</p>
+        <input type="number" id="camper_acum">
+
+        <button onclick="agregar_camper()">
+            agregar
+        </button>
+    </div>
+
+    <div class="modulo" id="gestor_conceptos"> 
+        <h1>Agregar Concepto</h1>
+        <p>Concepto</p>
+        <input type="text" id="concepto">
+        <p>Numero de Campcoins</p>
+        <input type="number" id="coins_concepto">
+    
+        <button onclick="agregar_concepto()">
+            agregar concepto
+        </button>
+    </div>
+    <!-- consignarrrrrrr-->
+    <div class="modulo">
+        <h1>consignacion Campcoins (SOLO SALEN CONCEPTO POSITIVOS)</h1>
+        <p>escoja el camper y los Campcoins a sumar  </p>
+        <select name="" id="selection_camper_consignar">
+            <option value=""></option>
+        </select>
+        <p>Y el concepto a agregar </p>
+        <select name="" id="selection_concepto_consignar">
+            <option value=""></option>
+        </select>
+        <p></p>
+        <button onclick="sumar_coins()">SUMAR CAMPCOINS</button>
+
+    </div>
+    <!-- descuento-->
+    <div class="modulo">
+        <h1>Descuento Campcoins (SOLO SALEN CONCEPTO NEGATIVOS)</h1>
+        <p>escoja el camper</p>
+        <select name="" id="selection_camper_descontar">
+            <option value=""></option>
+        </select>
+        <p>y el concepto a restar </p>
+        <select name="" id="selection_concepto_descontar">
+            <option value=""></option>
+        </select>
+        <p></p>
+        <button onclick="restar_coins()">RESTAR CAMPCOINS</button>
+    </div>
+    <div class="modulo" style="flex-direction: row;">
+        <h1 >Reporte</h1>
+        <button onclick="reporte()">listar</button>
+    </div>
+    
+    <div class="modulo" id="reporte">
+        <div class="caja">
+            <p>id</p>
+            <p>nombre</p>
+            <p>email</p>
+            <p>grupo</p>
+            <p>coins</p>
+            <p>op.Mod</p>
+            <p>op.Elim</p>
+            
+        </div>
+        <hr>
+        
+    </div>
+
+
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
